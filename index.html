@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ball Racings - 公式サイト</title>
-    <!-- Favicon (PNG Format & Apple Touch Icon) -->
+    <!-- Favicon -->
     <link rel="icon" href="./favicon.png?v=3" type="image/png">
     <link rel="shortcut icon" href="./favicon.png?v=3" type="image/png">
     <link rel="apple-touch-icon" href="./favicon.png?v=3">
@@ -124,7 +124,11 @@
             </a>
 
             <!-- Social Links & Action -->
-            <div class="flex items-center gap-4 sm:gap-6">
+            <div class="flex items-center gap-2 sm:gap-4">
+                <a href="#release-notes" class="text-sm font-semibold text-gray-300 hover:text-brand-cyan transition-colors px-3 py-1.5 rounded-lg hover:bg-white/5 border border-transparent hover:border-white/10 flex items-center gap-2">
+                    <i class="fa-solid fa-list-check text-brand-magenta"></i>
+                    <span>リリースノート</span>
+                </a>
                 <a href="#download" class="text-sm font-semibold text-gray-300 hover:text-brand-cyan transition-colors px-3 py-1.5 rounded-lg hover:bg-white/5 border border-transparent hover:border-white/10 flex items-center gap-2">
                     <i class="fa-solid fa-download text-brand-cyan"></i>
                     <span>ダウンロード</span>
@@ -152,13 +156,13 @@
 
             <!-- Title Actions -->
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-                <button id="boost-btn" class="w-full sm:w-auto px-6 py-4 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-orbitron font-bold text-sm tracking-wider uppercase transition-all duration-300 flex items-center justify-center gap-2">
+                <button id="boost-btn" class="w-full sm:w-auto px-6 py-4 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-orbitron font-bold text-sm tracking-wider uppercase transition-all duration-300 flex items-center justify-center gap-2 hover:border-brand-cyan shadow-lg">
                     <i class="fa-solid fa-bolt text-brand-cyan"></i> 視点ブースト体験
                 </button>
             </div>
 
             <!-- Quick Controls Hint for 3D Background -->
-            <div class="inline-flex items-center gap-4 px-4 py-2 rounded-lg bg-black/40 border border-white/5 text-xs text-gray-400 mb-8">
+            <div class="inline-flex items-center gap-4 px-4 py-2 rounded-lg bg-black/40 border border-white/5 text-xs text-gray-400 mb-8 backdrop-blur-sm">
                 <span><i class="fa-solid fa-mouse-pointer text-brand-cyan mr-1"></i> マウス操作で3Dカメラが動きます</span>
                 <span class="text-white/20">|</span>
                 <button id="cam-toggle" class="text-brand-cyan hover:underline font-semibold">カメラモード切替</button>
@@ -166,27 +170,81 @@
 
             <!-- Scroll Indicator -->
             <div class="mt-6 animate-bounce">
-                <a href="#download" class="text-gray-400 hover:text-brand-cyan transition-colors text-sm flex flex-col items-center gap-2">
+                <a href="#release-notes" class="text-gray-400 hover:text-brand-cyan transition-colors text-sm flex flex-col items-center gap-2">
                     <span class="font-orbitron text-xs tracking-widest uppercase">Scroll Down</span>
-                    <i class="fa-solid fa-chevron-down text-lg"></i>
+                    <svg class="w-5 h-5 text-brand-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                 </a>
             </div>
         </div>
     </main>
 
-    <!-- Download Section (Below Title Screen) -->
-    <section id="download" class="relative z-10 py-16 px-4 sm:px-6 border-t border-white/10 bg-black/40 backdrop-blur-md scroll-mt-20">
-        <div class="max-w-4xl mx-auto text-center">
+    <!-- Release Notes Section -->
+    <section id="release-notes" class="relative z-10 py-16 px-4 sm:px-6 border-t border-white/10 bg-black/30 backdrop-blur-md scroll-mt-20">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-orbitron font-extrabold text-2xl sm:text-3xl text-white tracking-wider mb-2 text-center">
+                RELEASE NOTES
+            </h2>
+            <p class="text-gray-400 text-sm mb-8 text-center">
+                アップデート情報
+            </p>
+
+            <!-- Version Card -->
+            <div class="glass-panel rounded-2xl p-6 sm:p-8 border border-white/10 max-w-xl mx-auto glass-panel-hover">
+                <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-6">
+                    <div>
+                        <span class="text-xs text-brand-cyan font-orbitron block mb-1">VERSION</span>
+                        <h3 class="font-orbitron text-2xl text-white font-bold tracking-wide">v0.1.0</h3>
+                    </div>
+                    <span class="text-xs px-3 py-1.5 rounded-full bg-brand-magenta/20 text-brand-magenta border border-brand-magenta/40 font-orbitron font-semibold">
+                        初回リリース
+                    </span>
+                </div>
+                <ul class="space-y-4 text-gray-200 text-sm sm:text-base">
+                    <li class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-brand-cyan/10 border border-brand-cyan/30 flex items-center justify-center text-brand-cyan shrink-0">
+                            <i class="fa-solid fa-rotate-left"></i>
+                        </div>
+                        <span class="font-medium">リトライ機能</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-brand-cyan/10 border border-brand-cyan/30 flex items-center justify-center text-brand-cyan shrink-0">
+                            <i class="fa-solid fa-gamepad"></i>
+                        </div>
+                        <span class="font-medium">カメラ操作仮想キー</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-brand-cyan/10 border border-brand-cyan/30 flex items-center justify-center text-brand-cyan shrink-0">
+                            <i class="fa-solid fa-hand-pointer"></i>
+                        </div>
+                        <span class="font-medium">スライドでボール移動</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="relative z-10 py-16 px-4 sm:px-6 border-t border-white/10 bg-black/50 backdrop-blur-md scroll-mt-20">
+        <div class="max-w-3xl mx-auto text-center">
             <h2 class="font-orbitron font-extrabold text-2xl sm:text-3xl text-white tracking-wider mb-2">
                 DOWNLOAD
             </h2>
             <p class="text-gray-400 text-sm mb-8">
-                最新バージョンをダウンロードしてゲームを始めよう
+                Windows向け最新ビルド
             </p>
 
-            <div class="flex justify-center">
-                <a href="https://github.com/exfat-dev3/Ball-Racings-Games/releases/download/v1/ball-racings_v0.1.0.zip" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-brand-cyan via-white to-brand-magenta hover:brightness-110 text-black font-orbitron font-bold text-sm tracking-wider transition-all duration-300 shadow-lg shadow-brand-cyan/20 hover:scale-105 flex items-center justify-center gap-3 group">
-                    <i class="fa-solid fa-download text-base group-hover:translate-y-0.5 transition-transform"></i>
+            <!-- Single Windows Download Card -->
+            <div class="glass-panel p-8 sm:p-10 rounded-2xl border border-white/10 glass-panel-hover flex flex-col items-center">
+                <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-brand-cyan/20 to-blue-500/20 border border-brand-cyan/40 flex items-center justify-center text-brand-cyan text-3xl mb-4 shadow-lg shadow-brand-cyan/10">
+                    <i class="fa-brands fa-windows"></i>
+                </div>
+                <h3 class="font-orbitron font-bold text-2xl text-white mb-2">Ball Racings for Windows</h3>
+                <p class="text-xs text-gray-400 mb-8">対応OS: Windows 10 / 11 (64bit) | バージョン: v0.1.0</p>
+                
+                <a href="https://github.com/exfat-dev3/Ball-Racings-Games/releases/download/v1/ball-racings_v0.1.0.zip" 
+                   download 
+                   class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-brand-cyan via-blue-500 to-brand-magenta hover:opacity-95 text-white font-bold text-base sm:text-lg tracking-wide transition-all duration-300 shadow-xl shadow-brand-cyan/20 flex items-center justify-center gap-3 hover:scale-105 active:scale-95">
+                    <i class="fa-solid fa-download text-xl"></i>
                     <span>Ball-Racings-v0.1.0.zipをダウンロード（Windows）</span>
                 </a>
             </div>
@@ -194,32 +252,38 @@
     </section>
 
     <!-- Footer -->
-    <footer class="relative z-10 border-t border-white/10 py-8 px-4 sm:px-6 bg-black/60">
-        <div class="max-w-7xl mx-auto flex items-center justify-center">
-            <div class="flex items-center gap-2 text-gray-400 text-xs text-center">
-                <span class="font-orbitron font-semibold text-white">BALL RACINGS</span>
-                <span>&copy; 2026 All Rights Reserved.</span>
+    <footer class="relative z-10 border-t border-white/10 bg-brand-dark py-8 px-6 text-center text-gray-500 text-xs">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>&copy; 2026 Ball Racings Project. All rights reserved.</p>
+            <div class="flex items-center gap-6">
+                <a href="#" class="hover:text-brand-cyan transition-colors">利用規約</a>
+                <a href="#" class="hover:text-brand-cyan transition-colors">プライバシーポリシー</a>
+                <a href="#" class="hover:text-brand-cyan transition-colors">お問い合わせ</a>
             </div>
         </div>
     </footer>
 
+    <!-- 3D Graphics Script -->
     <script>
-        // --- THREE.JS BACKGROUND SIMULATION ---
-        let scene, camera, renderer, balls = [], trackCurve, trackMesh;
+        let scene, camera, renderer;
+        let trackMesh, trackCurve;
+        let balls = [];
         let mouseX = 0, mouseY = 0;
+        let cameraMode = 0; // 0: Orbit, 1: Follow Ball
         let boostFactor = 1;
-        let cameraMode = 0; // 0: Orbiting, 1: Follow Lead Ball
+
+        window.onload = function() {
+            initThreeJS();
+            animate();
+        };
 
         function initThreeJS() {
             const canvas = document.getElementById('bg-canvas');
-            
-            // Scene setup
             scene = new THREE.Scene();
-            scene.fog = new THREE.FogExp2(0x05060f, 0.015);
 
-            // Camera setup
+            // Camera Setup
             camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
-            camera.position.set(0, 25, 60);
+            camera.position.set(0, 25, 55);
 
             // Renderer setup
             renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
@@ -296,7 +360,7 @@
 
                 balls.push({
                     mesh: mesh,
-                    progress: i * 0.18, // staggered start
+                    progress: i * 0.18,
                     speed: 0.0015 + Math.random() * 0.0005,
                     color: ballColors[i]
                 });
@@ -325,6 +389,22 @@
             // Event Listeners
             window.addEventListener('resize', onWindowResize);
             document.addEventListener('mousemove', onMouseMove);
+
+            // UI Interaction Hooks
+            const boostBtn = document.getElementById('boost-btn');
+            if (boostBtn) {
+                boostBtn.addEventListener('click', function() {
+                    boostFactor = 4;
+                });
+            }
+
+            const camToggle = document.getElementById('cam-toggle');
+            if (camToggle) {
+                camToggle.addEventListener('click', function() {
+                    cameraMode = (cameraMode + 1) % 2;
+                    this.textContent = cameraMode === 0 ? 'カメラモード切替 (追従モードへ)' : 'カメラモード切替 (自由カメラへ)';
+                });
+            }
         }
 
         function onMouseMove(event) {
@@ -349,16 +429,15 @@
             }
 
             // Update Ball Positions along the track curve
-            balls.forEach((ball, idx) => {
+            balls.forEach((ball) => {
                 ball.progress += ball.speed * boostFactor;
                 if (ball.progress > 1) ball.progress -= 1;
 
                 const point = trackCurve.getPointAt(ball.progress);
-                const tangent = trackCurve.getTangentAt(ball.progress);
 
                 ball.mesh.position.copy(point);
                 
-                // Add minor rotation for physics feel
+                // Add rotation for motion feel
                 ball.mesh.rotation.x += 0.05 * boostFactor;
                 ball.mesh.rotation.z += 0.03 * boostFactor;
             });
@@ -385,27 +464,6 @@
 
             renderer.render(scene, camera);
         }
-
-        window.onload = function() {
-            initThreeJS();
-            animate();
-
-            // Interactive Controls
-            const boostBtn = document.getElementById('boost-btn');
-            if (boostBtn) {
-                boostBtn.addEventListener('click', function() {
-                    boostFactor = 3.5; // Boost speed temporarily
-                });
-            }
-
-            const camToggleBtn = document.getElementById('cam-toggle');
-            if (camToggleBtn) {
-                camToggleBtn.addEventListener('click', function() {
-                    cameraMode = cameraMode === 0 ? 1 : 0;
-                    this.textContent = cameraMode === 0 ? "カメラモード切替 (追従)" : "カメラモード切替 (全景)";
-                });
-            }
-        };
     </script>
 </body>
 </html>
