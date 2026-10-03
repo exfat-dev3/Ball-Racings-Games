@@ -127,11 +127,15 @@
             <div class="flex items-center gap-2 sm:gap-4">
                 <a href="#release-notes" class="text-sm font-semibold text-gray-300 hover:text-brand-cyan transition-colors px-3 py-1.5 rounded-lg hover:bg-white/5 border border-transparent hover:border-white/10 flex items-center gap-2">
                     <i class="fa-solid fa-list-check text-brand-magenta"></i>
-                    <span>リリースノート</span>
+                    <span class="hidden sm:inline">リリースノート</span>
                 </a>
                 <a href="#download" class="text-sm font-semibold text-gray-300 hover:text-brand-cyan transition-colors px-3 py-1.5 rounded-lg hover:bg-white/5 border border-transparent hover:border-white/10 flex items-center gap-2">
                     <i class="fa-solid fa-download text-brand-cyan"></i>
-                    <span>ダウンロード</span>
+                    <span class="hidden sm:inline">ダウンロード</span>
+                </a>
+                <a href="#repository" class="text-sm font-semibold text-gray-300 hover:text-brand-cyan transition-colors px-3 py-1.5 rounded-lg hover:bg-white/5 border border-transparent hover:border-white/10 flex items-center gap-2">
+                    <i class="fa-brands fa-github text-white"></i>
+                    <span class="hidden sm:inline">GitHub</span>
                 </a>
             </div>
         </div>
@@ -246,6 +250,37 @@
                    class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-brand-cyan via-blue-500 to-brand-magenta hover:opacity-95 text-white font-bold text-base sm:text-lg tracking-wide transition-all duration-300 shadow-xl shadow-brand-cyan/20 flex items-center justify-center gap-3 hover:scale-105 active:scale-95">
                     <i class="fa-solid fa-download text-xl"></i>
                     <span>Ball-Racings-v0.2.0.zipをダウンロード（Windows）</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Repository Section -->
+    <section id="repository" class="relative z-10 py-16 px-4 sm:px-6 border-t border-white/10 bg-black/60 backdrop-blur-md scroll-mt-20">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="font-orbitron font-extrabold text-2xl sm:text-3xl text-white tracking-wider mb-2">
+                GITHUB REPOSITORY
+            </h2>
+            <p class="text-gray-400 text-sm mb-8">
+                GitHub公式リポジトリ
+            </p>
+
+            <div class="glass-panel p-8 sm:p-10 rounded-2xl border border-white/10 glass-panel-hover flex flex-col items-center">
+                <div class="w-16 h-16 rounded-2xl bg-white/5 border border-white/20 flex items-center justify-center text-white text-3xl mb-4 shadow-lg">
+                    <i class="fa-brands fa-github"></i>
+                </div>
+                <h3 class="font-orbitron font-bold text-2xl text-white mb-2">Ball-Racings-Games</h3>
+                <p class="text-sm text-gray-300 mb-6 max-w-md">
+                    プロジェクトのソースコード、リリース一覧、更新履歴は GitHub 上で公開されています。
+                </p>
+                
+                <a href="https://github.com/exfat-dev3/Ball-Racings-Games" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 hover:border-brand-cyan text-white font-bold text-base transition-all duration-300 shadow-lg flex items-center justify-center gap-3 hover:scale-105 active:scale-95">
+                    <i class="fa-brands fa-github text-xl"></i>
+                    <span>GitHub リポジトリを見る</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-xs text-gray-400"></i>
                 </a>
             </div>
         </div>
